@@ -18,9 +18,9 @@ code {
 @tailwind utilities;
 
 
-*{
-  /* border:solid rgb(182, 178, 178) 1px;  */
-  /* box-sizing: border-box; */
+.custom-style{
+  border:solid rgb(182, 178, 178) 1px;  
+  box-sizing: border-box;
 }
 
 
