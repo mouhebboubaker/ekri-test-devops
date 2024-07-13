@@ -1,9 +1,10 @@
 import "./App.css";
 import Begining from "./sections/Begining";
 import Description from "./sections/Description";
-import Footer from "./sections/Footer";
-import { Header } from "./sections/Header";
+import WidthSizes from "./sections/WidthSizes";
+import { Header } from "./components/Header";
 import Tendences from "./sections/Tendences";
+import Footer from "./sections/Footer";
 // import Test from "./sections/Test";
    
 
@@ -15,7 +16,8 @@ function App() {
         <Begining/>
         <Description />
         <Tendences />
-        <Footer />
+        <Footer/>
+        {/* <WidthSizes /> */}
       {/* <Test/> */}
     </div>
   );

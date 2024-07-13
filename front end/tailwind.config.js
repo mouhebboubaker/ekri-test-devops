@@ -10,6 +10,9 @@ module.exports = {
         "custom-indigo": "#1C1F33",
         "custom-cyan": "#5CA9BA",
         "custom-lime": "#4E706B",
+        "custom-blue":"#00AAFF",
+        "custom-orange":"#FF6100",
+        "footer-blue":"#49AAE1"
       },
       fontFamily: {
         Inika: ['"Inika"', "serif"],

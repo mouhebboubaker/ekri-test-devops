@@ -1,30 +1,34 @@
-import React from 'react'
-
+import React from "react";
+import logo from "../assets/logo.svg";
 function Footer() {
   return (
-    <div>
-      hello
-      <div className='max-w-1 border-black custom-style '>max-w-1 4px</div>
-      <div className='max-w-2 border-black custom-style '>max-w-2 8px </div>
-      <div className='max-w-5 border-black custom-style '>max-w-5 20px</div>
-      <div className='max-w-10 border-black custom-style '>max-w-10 40px</div>
-      <div className='max-w-20 border-black custom-style '>max-w-20 80px</div>
-      <div className='max-w-40 border-black custom-style'  >max-w-40 160px</div>
-      <div className='max-w-80 border-black custom-style '>max-w-80 320px</div>
-      <div className='max-w-96 border-black custom-style '>max-w-96</div>
-      <div className='max-w-sm border-black custom-style '>max-w-sm 320 px</div>
-      <div className='max-w-md border-black custom-style '>max-w-md 448 px</div>
-      <div className='max-w-lg border-black custom-style'  >max-w-lg 512 px</div>
-      <div className='max-w-xl border-black custom-style '>max-w-xl 576 px</div>
-      <div className='max-w-2xl border-black custom-style '>max-w-2xl 672 px</div>
-      <div className='max-w-3xl  border-black custom-style '>max-w-3xl 768 px </div>
-      <div className='max-w-4xl border-black custom-style '>max-w-4xl 896 px </div>
-      <div className='max-w-5xl border-black custom-style '>max-w-5xl 1024 px </div>
-      <div className='max-w-6xl border-black custom-style '>max-w-6xl 1152 px </div>
-      <div className='max-w-7xl border-black custom-style '>max-w-7xl 1280 px </div>
-      <div className='max-w-full border-black custom-style '>max-w-full 1400 px </div>
+    <div className="bg-footer-blue flex flex-col items-center mt-10">
+      <div className="flex flex-wrap relative right-10  gap-x-10  m-16 items-start">
+       
+        <div className="flex bg-white items-center p-4 rounded gap-1 py-7 mr-10" >
+          <img src={logo} width="70px" />
+          <p className="text-center font-bold text-teal-900 text-2xl ">كريتي</p>
+        </div>
+        <div className="">
+          <p className="text-white text    mb-1"> Publier une annonce</p>
+          <p className="text-white text   mb-1">Recherche selon faculté</p>
+          <p className="text-white text   mb-1">Recherche selon plage</p>
+          <p className="text-white text  mb-1">Recherche selon ville</p>
+        </div>
+        <div>
+          <p className="text-white text  mb-1">Qui somme nous ?</p>
+          <p className="text-white text  mb-1" >Contacter nous </p>
+        </div>
+      </div>
+
+      <hr class="w-[1200px] border-t-0.5 border-white mx-auto  " />
+      <p className="text-white text-xs font-semibold my-1">
+         
+        © 2024 tous droite reservé un site de location de maison en tunisie
+        -realisé par la socité MDAK-T 
+      </p>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

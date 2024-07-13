@@ -4,7 +4,7 @@ import motivation from "../assets/motivation.svg";
 
 function Description() {
   return (
-    <div className="flex flex-wrap px-40 py-24 ">
+    <div className="flex flex-wrap px-40 py-10 ">
       
       <div className="w-full flex justify-between items-center flex-wrap max-2xl:justify-center" >
       
@@ -25,7 +25,7 @@ function Description() {
       
       </div>
 
-      <div className="flex justify-center w-full flex-wrap mt-24 ">
+      <div className="flex justify-center w-full flex-wrap mt-15 ">
       <div className="sm:max-w-md  relative right-5 ">
         <p className="mb-5 font-bold font-Inika  text-3xl text-custom-lime">de plus :</p>
         <p>
