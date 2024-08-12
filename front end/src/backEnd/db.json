@@ -1,0 +1,88 @@
+{
+  "maisons": [
+    {
+      "id": 1,
+      "photo": "./cuisine.jpeg",
+      "titre": "à louer ville à monastir",
+      "nbChambre": "S+2",
+      "prix": "350dt",
+      "typeLocation": "Maison entière",
+      "dateCreation": "publier hier",
+      "Faculte": "Institut Supérieur d'Informatique et de Mathématiques de Monastir",
+      "plage": "karaia",
+      "ville": "monastir"
+    },
+    {
+      "id": 2,
+      "photo": "./cuisine.jpeg",
+      "titre": "à louer ville à monastir",
+      "nbChambre": "S+2",
+      "prix": "350dt",
+      "typeLocation": "Maison entière",
+      "dateCreation": "publier hier",
+      "Faculte": "Institut Supérieur d'Informatique et de Mathématiques de Monastir",
+      "plage": "karaia",
+      "ville": "monastir"
+    },
+    {
+      "id": 3,
+      "photo": "./cuisine.jpeg",
+      "titre": "à louer ville à monastir",
+      "nbChambre": "S+2",
+      "prix": "350dt",
+      "typeLocation": "Chambre A2",
+      "dateCreation": "publier hier",
+      "Faculte": "Institut Supérieur d'Informatique et de Mathématiques de Monastir",
+      "plage": "karaia",
+      "ville": "monastir"
+    },
+    {
+      "id": 4,
+      "photo": "./cuisine.jpeg",
+      "titre": "à louer ville à monastir",
+      "nbChambre": "S+2",
+      "prix": "350dt",
+      "typeLocation": "Maison entière",
+      "dateCreation": "publier hier",
+      "Faculte": "Isimm",
+      "plage": "karaia",
+      "ville": "monastir"
+    },
+    {
+      "id": 5,
+      "photo": "./cuisine.jpeg",
+      "titre": "à louer ville à monastir",
+      "nbChambre": "S+2",
+      "prix": "350dt",
+      "typeLocation": "Chambre A2",
+      "dateCreation": "publier hier",
+      "Faculte": "Isimm",
+      "plage": "karaia",
+      "ville": "monastir"
+    },
+    {
+      "id": 6,
+      "photo": "./cuisine.jpeg",
+      "titre": "à louer ville à monastir",
+      "nbChambre": "S+2",
+      "prix": "350dt",
+      "typeLocation": "Maison entière",
+      "dateCreation": "publier hier",
+      "Faculte": "Isimm",
+      "plage": "karaia",
+      "ville": "monastir"
+    },
+    {
+      "id": 7,
+      "photo": "./cuisine.jpeg",
+      "titre": "à louer ville à monastir",
+      "nbChambre": "S+2",
+      "prix": "350dt",
+      "typeLocation": "Chambre A2",
+      "dateCreation": "publier hier",
+      "Faculte": "Isimm",
+      "plage": "karaia",
+      "ville": "monastir"
+    }
+  ]
+}

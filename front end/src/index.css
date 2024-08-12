@@ -1,26 +1,105 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-.custom-style{
-  border:solid rgb(182, 178, 178) 1px;  
-  box-sizing: border-box;
+@layer base {
+  h1 {
+    /* @apply text-2xl   this is applay text lg on h1 in the base layer  */
+  }
 }
 
+@layer components {
+  .custom-style {
+    border: solid rgb(182, 178, 178) 1px;
+    box-sizing: border-box;
+  }
+  /*  juts using classes to apply a set of css utilities like classes in native css */
+  .btn {
+    @apply rounded bg-white ring-1 ring-orange-500;
+  }
+}
 
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
+
+@layer components {
+  .labelForm {
+    font-size: medium;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  .inputFrom {
+    border-radius: 8px;
+    padding: 5px;
+    font-size: small;
+    font-weight: 600;
+  }
+
+  .inputFrom {
+    @apply outline-none bg-white cursor-pointer;
+  }
+
+  .inputconnectForm {
+    @apply text-sm p-1 outline-none outline-1 outline-gray-400 rounded-sm mb-3 w-full;
+  }
+
+  .inputCreate1 {
+    @apply block   outline outline-1 outline-gray-500 rounded text-sm p-1 w-full;
+  }
+
+  .fileInput {
+     
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  .fileLabel {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 110px;
+    width: 110px;
+    border:2px dashed #bbbbbb;
+    border-radius:5px;
+    
+    cursor: pointer;
+
+  }
+}
+
+/* .navImg {
+  width: 100%;
+  height: 150px;
+  /* background-color: aquamarine;
+    background-image: url("./assets/blueKey.jpeg");
+  background-size:25%;
+  background-repeat:  repeat;
+  background-position: center  
+}   */
+
+/* *{
+  border:1px solid rgb(107, 213, 255);
+} */
+/* Any custom styles you add to the base, components, or utilities layers will only be included in your compiled CSS if those styles are actually used in your HTML. */
+/* If you want to add some custom CSS that should always be included, add it to your stylesheet without using the @layer directive: */
