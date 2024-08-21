@@ -2,12 +2,11 @@ import React from "react";
 import axios from "axios";
 
 function Card({item , photo }) {
-  console.log(item)
-
+ 
   const deleteMaison = async (id) => {
     console.log(id)
     try {
-      const response = await axios.delete(`http://localhost:4000/api/maisons/${id}`);
+      const response = await axios.delete(`http://localhost:3500/maisons/${id}`);
       console.log(response.data); // Affiche le message de succès
     } catch (error) {
       console.error('Erreur lors de la suppression de la maison:', error.response ? error.response.data : error.message);

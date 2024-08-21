@@ -6,12 +6,13 @@ import chauffage from "../../assets/heater.png";
 import climatiseur from "../../assets/air-conditioner.png";
 import { CreateAnnonceContext } from "./CreateAnnonce";
 import { DataContext } from "../../App";
+import { useNavigate } from "react-router-dom";
 
 function Part2() {
+  const navigate=useNavigate();
   const { formData, setFormData } = useContext(CreateAnnonceContext);
   const { myAxios } = useContext(DataContext);
 
-  console.log(myAxios);
   const handleInputChange = (event) => {
     const { name, value, type, files } = event.target;
     setFormData({
@@ -31,20 +32,48 @@ function Part2() {
     }
     setFormData(data);
   };
-
+ 
   const handleSubmit = async (event) => {
-    debugger;
     event.preventDefault();
-
-    console.log("myAxios", myAxios);
-    console.log("baseUrl", myAxios.defaults.baseURL);
-    console.log("url", myAxios.defaults.url);
-
     try {
-      const response = await myAxios.post("", formData);
-      console.log(response);
+      const token = localStorage.getItem("accessToken");
+
+      const response = await myAxios.post("/maisons", formData, {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+
+
+      
     } catch (err) {
-      console.log(err);
+       
+      if (err.response.status === 401) {
+       
+       try{
+
+       
+        console.log("invalid access token");
+        const response = await myAxios.get("/refreshToken");
+        console.log("recieve new access token", response.data.accessToken);
+        localStorage.setItem("accessToken", response.data.accessToken);
+        
+        //refaire l'operation 
+        const token = localStorage.getItem("accessToken");
+        response = await myAxios.post("/maisons", formData, {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        });
+      
+      
+      }catch(err){
+        if(err?.response?.status===401)// invalid refresh token due to logout or it's absence
+        navigate('/signIn')
+      }
+
+
+      }
     }
   };
 

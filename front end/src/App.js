@@ -20,19 +20,18 @@ import Part2 from "./pages/CreateAnnonce/Part2";
 import { useAxiosFetch } from "./hooks/useAxiosFetch";
 import RouteLayout from "./layouts/RouteLayout";
 import axios from "axios";
- 
 
 export const DataContext = createContext();
 
 function App() {
-  const URI = "http://localhost:4000/api/maisons";
+  const URI = "http://localhost:3500/maisons";
   const [maisons, setMaisons] = useState([]);
   const { data, fetchError, isLoading } = useAxiosFetch(URI);
 
-  const myAxios=axios.create({
-    baseURL:'http://localhost:4000/api/maisons'
-  })
-  console.log(myAxios)
+  const myAxios = axios.create({
+    baseURL: "http://localhost:3500",
+    withCredentials: true,
+  });
 
   useEffect(() => {
     setMaisons(data);
@@ -43,7 +42,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RouteLayout />} errorElement={<ErrorPage />}>
         <Route index element={<HomePage />} />
-        <Route path="Annonces" element={<AnnoncesPage   />} />
+        <Route path="Annonces" element={<AnnoncesPage />} />
         <Route path="Annonce/*" element={<AnnoncePage />} />
         <Route path="SignUp" element={<SignUp />} />
         <Route path="SignIn" element={<SignIn />} />
@@ -59,7 +58,7 @@ function App() {
   return (
     <>
       <DataContext.Provider
-        value={{ maisons, setMaisons, fetchError, isLoading,myAxios}}
+        value={{ maisons, setMaisons, fetchError, isLoading, myAxios }}
       >
         <RouterProvider router={router} />
       </DataContext.Provider>

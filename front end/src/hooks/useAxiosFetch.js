@@ -34,9 +34,8 @@ const useAxiosFetch = (dataUrl) => {
     };
 
     setTimeout(() => {
-      console.log("set time out before fetch  !");
-      fetchData(dataUrl);
-    }, 4000);
+       fetchData(dataUrl);
+    }, 1000);
 
     const cleanUp = () => {
       console.log("in cleanup ");

@@ -39,7 +39,7 @@ const createMaison = async (req, res) => {
     prix,
     Equipment,
   } = req.body;
-  console.log(req.body);
+  console.log("creat maison",req.body);
   //   let emptyFields = []
 
   //   if (!title) {
