@@ -1,7 +1,15 @@
-to collaborators 
- Recommended Git Workflow (PR-Based)
+how to start the project
+1)in the first terminale
+cd "front end" 
+npm start
+2)in the second terminale 
+node server.js
 
-after all clone the project 
+after that make your changes in your branch and commit and do a pull request as it's instructed in the next section specified to collaborators 
+
+Recommended Git Workflow (PR-Based)
+
+first clone the project 
 
 Always Start with an Updated main Branch
 
@@ -42,12 +50,5 @@ Write clear commit messages (e.g., "Fix: Correct login API error handling").
 Pushing directly to main (use PRs!).
 
 
-how to start the project
-1)in the first terminale
-cd "front end" 
-npm start
-2)in the second terminale 
-node server.js
 
-after that make your changes in your branch and commit and do a pull request as it's instructed before
 
