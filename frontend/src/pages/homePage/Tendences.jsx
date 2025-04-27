@@ -8,6 +8,7 @@ import { DataContext } from "../../App";
 
 function Tendences() {
   const {maisons}=useContext(DataContext)
+  
   return (
     <div className="mb-10">
       <p className="text-center my-5 mt-10 font-bold font-Inika  text-3xl text-custom-lime">

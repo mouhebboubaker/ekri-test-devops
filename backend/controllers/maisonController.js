@@ -57,7 +57,7 @@ const createMaison = async (req, res) => {
 
   //   // add to the database
   try {
-    const maison = await Maison.create({
+    const maison = await Maison.q({
       titre,
       numero,
       description,
