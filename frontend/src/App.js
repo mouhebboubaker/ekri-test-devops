@@ -34,6 +34,7 @@ function App() {
   });
 
   useEffect(() => {
+    console.log(`hello ${process.env.BACKEND_URL}`);
     setMaisons(data);
   }, [data]);
 

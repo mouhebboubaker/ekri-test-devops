@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3500:3500"
+    environment:
+      - MONGO_DB_USERNAME=mouhebboubaker
+      - MONGO_DB_PWD=M.mongodb.27704471
+    networks:
+      - app-network
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+networks:
+  app-network:
+    driver: bridge
