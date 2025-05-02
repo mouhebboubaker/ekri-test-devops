@@ -5,12 +5,10 @@
 
 #### Clone the project
 ```
-
-
-Open two terminal windows:
-git clone <your-repo-url>
-cd <project-folder>
+git clone  https://github.com/mouhebboubaker/ekri-test-devops.git
+cd ekri-test-devops
 ```
+Open two terminal windows:
 #### 1. Frontend
 ``` 
 cd frontend
@@ -24,51 +22,68 @@ npm install
 node server.js
 ```
 
- 
-after that make your changes in your branch and commit and do a pull request as it's instructed in the next section specified to collaborators 
+## 🚀 Starting the Project with Docker Compose and Terraform
 
-Recommended Git Workflow (PR-Based)
+This project can be started and managed using **Docker Compose** for container orchestration and **Terraform** for infrastructure as code.
 
-first clone the project 
+---
 
-Always Start with an Updated main Branch
+### 🐳 Using Docker Compose
 
+To build and run both the frontend and backend containers locally:
+
+```bash
+docker-compose up
+```
+### using terraform
+```bash
+cd terraform
+terrafrom init
+terrafrom apply
+```
+
+# to collaborators
+
+##  Recommended Git Workflow (PR-Based)
+
+1. **Clone the project**
+
+2. **Always update `main`**
+```bash
 git checkout main
 git pull origin main
+```
 
-Create a New feature/ahmed or feature/hatem Branch
+* Create a new feature branch
 
 git checkout -b feature/your-feature-name
-
-Make Changes & Commit
+* Make changes  commit and push
+```bash
 git add .
-git commit -m "Description of changes"  # Be specific!
+git commit -m "Clear description of your changes"
 git push origin feature/your-feature-name
-Create a Pull Request (PR) on GitHub
+``` 
+* Create a Pull Request (PR) from your remote branch to the main branch that will be approved by the admin
+  
+ ## 🔧 Replace the Last Commit (if it didn’t work)
 
-Go to your repo → "Pull Requests" → "New PR".
+If you want to modify or replace the last commit:
 
-Set base: main ← compare: feature/your-feature-name.
-Add a title/description and tag reviewers (you).
+```bash
+git reset --soft HEAD~1  # Go back one commit (remove last commit but keep changes)
+git add .
+git commit -m "Corrected commit message or fixed bug"
+git push --force
+```
 
+## 🔄 Pull a Remote Branch
 
-Review & Approve
-Teammates review code, suggest changes (via comments).
+To fetch and checkout a new remote branch:
 
-Merge to main
-After approval, click "Merge PR" (use Squash and Merge for clean history).
-Delete the Old Branch (optional but recommended)
-git branch -d feature/your-feature-name  # Local
-git push origin --delete feature/your-feature-name  # Remote
-
-🔹 Critical Recommendations for Teams
-✅ Do These:
-Pull main before any new work and before creating branches  to avoid conflicts.
-Write clear commit messages (e.g., "Fix: Correct login API error handling").
-
-❌ Avoid These:
-Pushing directly to main (use PRs!).
-
+```bash
+git fetch --all  # Fetch all remote branches
+git checkout -b mouheb origin/mouheb  # Create and switch to a local branch from remote
+```bash
 
 
 
