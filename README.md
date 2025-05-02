@@ -1,66 +1,89 @@
-how to start the project
-1)in the first terminale
-cd "front end"
+# DevOps Project : House Location Web Application
+## Getting Started
+
+### Run the Application Locally
+
+#### Clone the project
+```
+git clone  https://github.com/mouhebboubaker/ekri-test-devops.git
+cd ekri-test-devops
+```
+Open two terminal windows:
+#### 1. Frontend
+``` 
+cd frontend
 npm install
 npm start
-2)in the second terminale
-cd "backend"
+```
+#### 2. Backend
+```
+cd backend
 npm install
 node server.js
+```
 
-after that make your changes in your branch and commit and do a pull request as it's instructed in the next section specified to collaborators
+ 
+## 🚀 Starting the Project with Docker Compose and Terraform
+This project can be started and managed using **Docker Compose** for container orchestration and **Terraform** for infrastructure as code.
 
-Recommended Git Workflow (PR-Based)
+ 
 
-first clone the project
+### 🐳 Using Docker Compose
 
-Always Start with an Updated main Branch
+To build and run both the frontend and backend containers locally:
 
+```bash
+docker-compose up
+```
+### using terraform
+```bash
+cd terraform
+terrafrom init
+terrafrom apply
+```
+
+# to collaborators
+
+##  Recommended Git Workflow (PR-Based)
+
+1. **Clone the project**
+
+2. **Always update `main`**
+```bash
 git checkout main
 git pull origin main
+```
 
-Create a New feature/ahmed or feature/hatem Branch
+* Create a new feature branch
 
 git checkout -b feature/your-feature-name
-
-Make Changes & Commit
+* Make changes  commit and push
+```bash
 git add .
-git commit -m "Description of changes" # Be specific!
+git commit -m "Clear description of your changes"
 git push origin feature/your-feature-name
-Create a Pull Request (PR) on GitHub
+``` 
+* Create a Pull Request (PR) from your remote branch to the main branch that will be approved by the admin
+  
+ ## 🔧 Replace the Last Commit (if it didn’t work)
 
-Go to your repo → "Pull Requests" → "New PR".
+ 
+If you want to modify or replace the last commit:
 
-Set base: main ← compare: feature/your-feature-name.
-Add a title/description and tag reviewers (you).
-
-Review & Approve
-Teammates review code, suggest changes (via comments).
-
-Merge to main
-After approval, click "Merge PR" (use Squash and Merge for clean history).
-Delete the Old Branch (optional but recommended)
-git branch -d feature/your-feature-name # Local
-git push origin --delete feature/your-feature-name # Remote
-
-🔹 Critical Recommendations for Teams
-✅ Do These:
-Pull main before any new work and before creating branches to avoid conflicts.
-Write clear commit messages (e.g., "Fix: Correct login API error handling").
-
-❌ Avoid These:
-Pushing directly to main (use PRs!).
-
-if you have changes and whant to replace the last commit because it didn't work
-git reset --soft HEAD~1[hashcode]
-# modify your code if needed
+```bash
+git reset --soft HEAD~1  # Go back one commit (remove last commit but keep changes)
 git add .
 git commit -m "Corrected commit message or fixed bug"
 git push --force
+```
 
+## 🔄 Pull a Remote Branch
+To fetch and checkout a new remote branch:
+```bash
+git fetch --all  # Fetch all remote branches
+git checkout -b mouheb origin/mouheb  # Create and switch to a local branch from remote
+```bash
 
-
----
 to pull new branch
 git fetch --all
 fetch all remote branches (update your remote branch to much the github remote branch)
