@@ -1,10 +1,30 @@
-how to start the project
-1)in the first terminale
-cd "front end" 
-npm start
-2)in the second terminale 
-node server.js
+# DevOps Project : House Location Web Application
+## Getting Started
 
+### Run the Application Locally
+
+#### Clone the project
+```
+
+
+Open two terminal windows:
+git clone <your-repo-url>
+cd <project-folder>
+```
+#### 1. Frontend
+``` 
+cd frontend
+npm install
+npm start
+```
+#### 2. Backend
+```
+cd backend
+npm install
+node server.js
+```
+
+ 
 after that make your changes in your branch and commit and do a pull request as it's instructed in the next section specified to collaborators 
 
 Recommended Git Workflow (PR-Based)
