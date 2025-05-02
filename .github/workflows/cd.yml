@@ -36,4 +36,4 @@ jobs:
         with:
           context: ./frontend
           push: true
-          tags: mouhebboubaker/frontend:latest
+          tags: mouhebboubaker2/frontend:latest

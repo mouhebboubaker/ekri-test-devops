@@ -1,8 +1,11 @@
 how to start the project
 1)in the first terminale
 cd "front end"
+npm install
 npm start
 2)in the second terminale
+cd "backend"
+npm install
 node server.js
 
 after that make your changes in your branch and commit and do a pull request as it's instructed in the next section specified to collaborators
@@ -49,12 +52,19 @@ Write clear commit messages (e.g., "Fix: Correct login API error handling").
 Pushing directly to main (use PRs!).
 
 if you have changes and whant to replace the last commit because it didn't work
-git reset --soft HEAD~1
+git reset --soft HEAD~1[hashcode]
 # modify your code if needed
 git add .
 git commit -m "Corrected commit message or fixed bug"
 git push --force
 
+
+
+---
+to pull new branch
+git fetch --all
+fetch all remote branches (update your remote branch to much the github remote branch)
+git checkout -b mouheb origin/mouheb (create new branch and merge it from the remotebranch)
 
 ---
 
