@@ -53,7 +53,7 @@ app.use((err,req,res,next)=>{
 })
 
 
-
+let server;
 
 
 //connect to db
@@ -61,7 +61,7 @@ mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log('connected to database');
     //listen to port 
-    app.listen(process.env.PORT,()=>{
+    server = app.listen(process.env.PORT,()=>{
         console.log('listenning for requests on port ',process.env.PORT)
     })
 })
@@ -69,3 +69,6 @@ mongoose.connect(process.env.MONGO_URI)
     console.log(err);
 })
 
+
+// ✅ Fix incorrect export syntax
+module.exports = { app, server, mongoose };

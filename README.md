@@ -22,11 +22,11 @@ npm install
 node server.js
 ```
 
+ 
 ## 🚀 Starting the Project with Docker Compose and Terraform
-
 This project can be started and managed using **Docker Compose** for container orchestration and **Terraform** for infrastructure as code.
 
----
+ 
 
 ### 🐳 Using Docker Compose
 
@@ -67,6 +67,7 @@ git push origin feature/your-feature-name
   
  ## 🔧 Replace the Last Commit (if it didn’t work)
 
+ 
 If you want to modify or replace the last commit:
 
 ```bash
@@ -77,13 +78,17 @@ git push --force
 ```
 
 ## 🔄 Pull a Remote Branch
-
 To fetch and checkout a new remote branch:
-
 ```bash
 git fetch --all  # Fetch all remote branches
 git checkout -b mouheb origin/mouheb  # Create and switch to a local branch from remote
 ```bash
 
+to pull new branch
+git fetch --all
+fetch all remote branches (update your remote branch to much the github remote branch)
+git checkout -b mouheb origin/mouheb (create new branch and merge it from the remotebranch)
 
+---
 
+to pull the images that are hosted in docker hub and run them loclally as a cluster you just need to use the docker-compose-from-dockerhub.yml file that do that work ==> in the directory that containe docker-compose-from-dockerhub.yml run docker-compose -f docker-compose-from-dockerhub.yml up
