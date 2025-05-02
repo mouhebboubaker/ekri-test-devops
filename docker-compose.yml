@@ -23,3 +23,5 @@ services:
 networks:
   app-network:
     driver: bridge
+
+# this is a comment 
